@@ -36,3 +36,25 @@ const teamMembers = [
         img: "img/female3.png"
     }
 ];
+
+// Collego a JS l'elemento container di HTML e lo salvo in una variabile
+const container = document.querySelector(".team-container");
+// ciclo con un foreach tutti gli oggetti dell'array
+teamMembers.forEach((member) => {
+    container.innerHTML +=`
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img class="img-fluid rounded-start" src="${member.img}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title">${member.name}</h3>
+                    <p class="card-text">${member.role}</p>
+                    <p class="card-text"> ${member.email}</p>
+                </div> 
+            </div>
+        </div>
+    </div>`
+});
+
