@@ -42,7 +42,7 @@ const container = document.querySelector(".team-container");
 // ciclo con un foreach tutti gli oggetti dell'array
 teamMembers.forEach((member) => {
     container.innerHTML +=`
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3 col-md-4" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
                 <img class="img-fluid rounded-start" src="${member.img}">
